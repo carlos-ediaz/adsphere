@@ -14,12 +14,17 @@ provider:
 
 functions:
   api:
-    handler: index.handler
+    handler: src/index.handler
     events:
       - httpApi:
           path: /
           method: get
-
+  createAd: 
+    handler: src/createAd.createAd
+    events:
+      - httpApi:
+          path: /ads
+          method: post
 resources:
   Resources:
     AdsTable:
