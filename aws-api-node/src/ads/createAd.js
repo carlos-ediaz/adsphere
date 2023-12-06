@@ -1,6 +1,7 @@
 const { v4 } = require("uuid");
 const AWS = require("aws-sdk");
-
+// const middy = require("@middy/core");
+// const jsonBodyParser = require('@middy/http-json-body-parser')
 const createAd = async (event) => {
   try {
     const dynamodb = new AWS.DynamoDB.DocumentClient();
@@ -12,7 +13,7 @@ const createAd = async (event) => {
       id,
       title,
       description,
-      createdAt,
+      createdAt: createdAt.toISOString(),
       visible: true,
     };
     await dynamodb
