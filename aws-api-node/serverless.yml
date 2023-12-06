@@ -20,29 +20,35 @@ functions:
           path: /
           method: get
   createAd: 
-    handler: src/createAd.createAd
+    handler: src/ads/createAd.createAd
     events:
       - httpApi:
           path: /ads
           method: post
   getAds: 
-    handler: src/getAds.getAds
+    handler: src/ads/getAds.getAds
     events:
       - httpApi:
           path: /ads
           method: get
   getAd: 
-    handler: src/getAd.getAd
+    handler: src/ads/getAd.getAd
     events:
       - httpApi:
           path: /ads/{id}
           method: get
   updateAd: 
-    handler: src/updateAd.updateAd
+    handler: src/ads/updateAd.updateAd
     events:
       - httpApi:
           path: /ads/{id}
           method: put
+  deleteAd: 
+    handler: src/ads/deleteAd.deleteAd
+    events:
+      - httpApi:
+          path: /ads/{id}
+          method: delete
 resources:
   Resources:
     AdsTable:
