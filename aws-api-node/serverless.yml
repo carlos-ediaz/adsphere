@@ -25,6 +25,24 @@ functions:
       - httpApi:
           path: /ads
           method: post
+  getAds: 
+    handler: src/getAds.getAds
+    events:
+      - httpApi:
+          path: /ads
+          method: get
+  getAd: 
+    handler: src/getAd.getAd
+    events:
+      - httpApi:
+          path: /ads/{id}
+          method: get
+  updateAd: 
+    handler: src/updateAd.updateAd
+    events:
+      - httpApi:
+          path: /ads/{id}
+          method: put
 resources:
   Resources:
     AdsTable:
