@@ -5,6 +5,7 @@ import React from "react";
 
 import { Amplify } from "aws-amplify";
 import { Authenticator, useAuthenticator } from "@aws-amplify/ui-react-native";
+import { AppRegistry } from "react-native";
 
 import awsExports from "./src/aws-exports";
 Amplify.configure(awsExports);
@@ -18,7 +19,7 @@ function App() {
   return (
     <Authenticator.Provider>
       <Authenticator>
-        <View styles={StyleSheet.container}>
+        <View style={styles.container}>
           <Text>Check you App.js file</Text>
           <SignOutButton />
         </View>
@@ -26,6 +27,7 @@ function App() {
     </Authenticator.Provider>
   );
 }
+AppRegistry.registerComponent("main", () => App);
 
 export default App;
 
