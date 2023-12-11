@@ -1,6 +1,6 @@
 {
   "api": {
-    "adsBe": {
+    "awsfe": {
       "dependsOn": [],
       "output": {
         "authConfig": {
@@ -23,7 +23,7 @@
     }
   },
   "auth": {
-    "adsbee45702ce": {
+    "awsfe": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
@@ -35,9 +35,7 @@
           "passwordPolicyCharacters": [],
           "passwordPolicyMinLength": 8
         },
-        "signupAttributes": [
-          "EMAIL"
-        ],
+        "signupAttributes": [],
         "socialProviders": [],
         "usernameAttributes": [
           "EMAIL"
@@ -48,37 +46,6 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
-    }
-  },
-  "function": {
-    "postConfirm": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    }
-  },
-  "parameters": {
-    "AMPLIFY_function_postConfirm_deploymentBucketName": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "postConfirm"
-        }
-      ]
-    },
-    "AMPLIFY_function_postConfirm_s3Key": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "postConfirm"
-        }
-      ]
-    }
-  },
-  "storage": {
-    "DBUser": {
-      "providerPlugin": "awscloudformation",
-      "service": "DynamoDB"
     }
   }
 }

@@ -1,0 +1,12 @@
+{
+  "resourceName": "DBUser",
+  "tableName": "DBUser",
+  "partitionKey": {
+    "fieldName": "user",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": [
+    "DBUserTrigger769d12e8"
+  ]
+}
